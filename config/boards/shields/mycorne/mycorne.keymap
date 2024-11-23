@@ -1,0 +1,25 @@
+/ {
+    keymap {
+        compatible = "zmk,keymap";
+
+        /* Camada Principal (QWERTY) */
+        default_layer {
+            bindings = <
+                &kp Q    &kp W    &kp E    &kp R    &kp T
+                &kp A    &kp S    &kp D    &kp F    &kp G
+                &kp Z    &kp X    &kp C    &kp V    &kp B
+                &kp N1   &kp N2   &kp N3
+            >;
+        };
+
+        /* Camada Função (FN) */
+        fn_layer {
+            bindings = <
+                &kp N1   &kp N2   &kp N3   &kp N4   &kp N5
+                &kp TAB  &kp UP   &kp DOWN &kp LEFT &kp RIGHT
+                &kp HOME &kp END  &kp PGUP &kp PGDN &kp DEL
+                &trans    &trans    &trans
+            >;
+        };
+    };
+};
