@@ -41,7 +41,7 @@ layers:
   - {t: ▽, type: trans}
   - Gui
   - {type: held}
-  - ␣
+  - ⏎
   - ⏎
   - {t: ▽, type: trans}
   - Alt
