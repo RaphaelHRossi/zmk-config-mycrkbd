@@ -39,10 +39,6 @@
     };
 };
 
-&bluetooth {
-    bt-device-name = "EVA 00 KBD";
-};
-
 / {
     chosen {
         zmk,underglow = &led_strip;
