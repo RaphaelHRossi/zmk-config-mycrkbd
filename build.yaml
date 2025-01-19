@@ -93,7 +93,7 @@ include:
     # nice_nano_v2 + nice_oled
   - board: nice_nano_v2
     shield: corne_left nice_oled
-    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"Nice_Corne_Oled\"
+    cmake-args: -DCONFIG_ZMK_KEYBOARD_NAME=\"EVA 00 KBD\"
     artifact-name: nice_corne_left_oled
     snippet: studio-rpc-usb-uart
   - board: nice_nano_v2
