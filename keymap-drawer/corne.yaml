@@ -1,7 +1,6 @@
 layout: {zmk_keyboard: corne}
 layers:
-  default: [Esc, '1', Q, W, E, R, Y, U, I, O, P, ⌫, ↹, Ctrl, A, S, D, F, H, J, K, L, Esc, '''', Alt, Shift, Z, X, C, V, N, M, ',', ., /, Esc, Gui, lower, ␣, ⏎, raise,
-    ␣]
+  default: [↹, Q, W, E, R, T, Y, U, I, O, P, ⌫, CTRL, A, S, D, F, G, H, J, K, L, ;, '''', SHFT, Z, X, C, V, B, N, M, ',', ., /, Esc, Gui, lower, ␣, ⏎, raise, Alt]
   lower:
   - ↹
   - '1'
