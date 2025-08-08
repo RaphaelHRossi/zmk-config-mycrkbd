@@ -27,11 +27,11 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - Ctrl
-  - '6'
-  - '7'
-  - '8'
-  - '9'
-  - '0'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
