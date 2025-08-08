@@ -133,8 +133,8 @@ Layout ABNT2 de referência:
 //#define BR_FSLH &kp SLASH    // / (barra) - OPÇÃO 1: SLASH direto
 
 // Alternativas para barra (descomente se necessário):
-#define BR_FSLH &forward_slash    // / (barra) - OPÇÃO 2: macro personalizada
-// #define BR_FSLH &kp FSLH          // / (barra) - OPÇÃO 3: FSLH direto
+//#define BR_FSLH &forward_slash    // / (barra) - OPÇÃO 2: macro personalizada dispara : ;
+#define BR_FSLH &kp FSLH          // / (barra) - OPÇÃO 3: FSLH direto
 
 // CARACTERES COM SHIFT
 #define BR_DQUO &kp LS(N2)   // " (aspas duplas)
