@@ -11,6 +11,15 @@
 #include "keymap_brazilian_abnt2_zmk.h"
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        game_toggle: game_toggle {
+            timeout-ms = <50>;
+            key-positions = <37 40>; // LWR + RSE
+            bindings = <&tog 3>; // Toggle GAME layer (layer 3)
+        };
+    };
     macros {
         // Macro para interrogação - abordagem 1: simulando Shift+W no ABNT2
         question_mark_1: question_mark_1 {
@@ -142,6 +151,19 @@ BR_TAB      &kp EXCL      BR_AT         BR_HASH       BR_DLR        BR_PERC     
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        BR_MINUS   BR_EQUAL   BR_LBKT      BR_RBKT   BR_BSLH   BR_QUOT
 BR_LCTRL    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE    &kp C_PLAY    &kp C_PAUSE         &kp C_NEXT &kp C_PREV BR_LCBR      BR_RCBR   BR_PIPE   BR_PLUS
                                          BR_LGUI    &studio_unlock   BR_SPACE           BR_RET     &studio_unlock     BR_LALT
+            >;
+        };
+
+        // Layer 3: Gaming (toggle via LWR+RSE combo). Default: fall-through to base.
+        game_layer {
+            // -----------------------------------------------------------------------------------------
+            // Mostly fall-through so you can selectively override keys for games.
+            //                    |     |     |     |   |     |     |     |
+            bindings = <
+    BR_ESC    &trans    BR_Q     BR_W     BR_E     BR_R           BR_T     BR_Y     BR_U     BR_I     BR_O     BR_P
+    BR_TAB    BR_LSHFT  BR_A     BR_S     BR_D     BR_F           BR_G     BR_H     BR_J     BR_K     BR_L     BR_CEDL
+    BR_LALT   BR_LCTRL  BR_Z     BR_X     BR_C     BR_V           BR_B     BR_N     BR_M     BR_COMM  BR_DOT   &trans
+                                 BR_LGUI  &trans   BR_SPACE       BR_RET   &trans   BR_BSPC
             >;
         };
     };
