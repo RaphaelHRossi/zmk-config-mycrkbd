@@ -13,7 +13,7 @@ layers:
   - '8'
   - '9'
   - '0'
-  - ⌫
+  - ⌦
   - BT CLR
   - BT 1
   - BT 2
@@ -24,8 +24,8 @@ layers:
   - ↓
   - ↑
   - →
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - '&HOME'
+  - '&END'
   - Ctrl
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
