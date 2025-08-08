@@ -15,11 +15,11 @@ layers:
   - '0'
   - ⌦
   - Shift
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - '?'
+  - '['
+  - Sft+[
+  - ''''
+  - Sft+'
+  - '&question_mark_4'
   - ←
   - ↓
   - ↑
@@ -31,13 +31,13 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - KP DIVIDE
+  - Q
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Esc
   - Gui
   - {type: held}
   - ⏎
@@ -47,15 +47,15 @@ layers:
   raise:
   - ↹
   - '!'
-  - '@'
-  - '#'
-  - $
-  - '%'
-  - ^
-  - AMPS
-  - KP MULTIPLY
-  - (
-  - )
+  - Sft+3
+  - Sft+4
+  - Sft+5
+  - Sft+6
+  - Sft+7
+  - Sft+8
+  - Sft+9
+  - Sft+0
+  - Sft+-
   - ⌫
   - BT CLR
   - BT 1
@@ -65,9 +65,9 @@ layers:
   - BT 5
   - '-'
   - '='
-  - '['
   - ']'
   - \
+  - NUBS
   - '`'
   - Ctrl
   - Vol Down
@@ -77,10 +77,10 @@ layers:
   - PAUSE
   - ⏭️
   - ⏮️
-  - '{'
-  - '}'
-  - '|'
-  - '~'
+  - Sft+]
+  - Sft+\
+  - Sft+NUBS
+  - Sft+=
   - Gui
   - '&studio_unlock'
   - ␣
