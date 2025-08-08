@@ -27,17 +27,17 @@ layers:
   - Home
   - End
   - Ctrl
-  - '['
-  - Sft+[
-  - ''''
-  - Sft+'
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - /
-  - '['
-  - Sft+'
-  - '['
-  - '['
-  - Sft+'
-  - ''''
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Esc
   - Gui
   - {type: held}
   - ⏎
