@@ -129,6 +129,7 @@ Layout ABNT2 de referência:
 #define BR_COMM &kp COMMA    // , (vírgula)
 #define BR_DOT &kp DOT       // . (ponto)
 #define BR_SCLN &kp FSLH     // ; (ponto e vírgula)
+#define BR_FSLH &kp Q        // / (barra) - posição correta no ABNT2
 
 // CARACTERES COM SHIFT
 #define BR_DQUO &kp LS(N2)   // " (aspas duplas)
@@ -151,7 +152,7 @@ Layout ABNT2 de referência:
 #define BR_PIPE &kp LS(NUBS) // | (pipe)
 #define BR_LABK &kp LS(COMMA) // < (menor que)
 #define BR_RABK &kp LS(DOT)   // > (maior que)
-#define BR_QUES &kp LS(FSLH)  // ? (interrogação)
+#define BR_QUES &kp LS(W)     // ? (interrogação) - posição correta no ABNT2
 
 // CARACTERES COM ALTGR (right alt)
 #define BR_SUP2 &kp RA(N2)   // ² (dois ao quadrado)
@@ -194,22 +195,23 @@ Layout ABNT2 de referência:
 #define BR_O_CIRC &macro_tap &kp LS(SQT) &kp O   // ^ + o = ô
 #define BR_U_CIRC &macro_tap &kp LS(SQT) &kp U   // ^ + u = û
 
-// VERSÕES MAIS SIMPLES - Use dead keys diretamente
-// Pressione a tecla de acento e depois a letra
-#define BR_AACUTE BR_ACUT   // Use acento agudo + A
-#define BR_EACUTE BR_ACUT   // Use acento agudo + E  
-#define BR_IACUTE BR_ACUT   // Use acento agudo + I
-#define BR_OACUTE BR_ACUT   // Use acento agudo + O
-#define BR_UACUTE BR_ACUT   // Use acento agudo + U
+// LETRAS ACENTUADAS DIRETAS - Mapeamento correto para ABNT2
+// Essas são as posições exatas no layout ABNT2 brasileiro
+#define BR_AACUTE &kp LBKT &kp A    // ´ + a = á  
+#define BR_EACUTE &kp LBKT &kp E    // ´ + e = é
+#define BR_IACUTE &kp LBKT &kp I    // ´ + i = í
+#define BR_OACUTE &kp LBKT &kp O    // ´ + o = ó
+#define BR_UACUTE &kp LBKT &kp U    // ´ + u = ú
 
-#define BR_AGRAVE BR_GRV    // Use crase + A
-#define BR_ATILDE BR_TILD   // Use til + A
-#define BR_OTILDE BR_TILD   // Use til + O
-#define BR_ACIRC BR_CIRC    // Use circunflexo + A
-#define BR_ECIRC BR_CIRC    // Use circunflexo + E
-#define BR_ICIRC BR_CIRC    // Use circunflexo + I
-#define BR_OCIRC BR_CIRC    // Use circunflexo + O
-#define BR_UCIRC BR_CIRC    // Use circunflexo + U
+#define BR_AGRAVE &kp LS(LBKT) &kp A // ` + a = à
+#define BR_ATILDE &kp SQT &kp A      // ~ + a = ã  
+#define BR_OTILDE &kp SQT &kp O      // ~ + o = õ
+
+#define BR_ACIRC &kp LS(SQT) &kp A   // ^ + a = â
+#define BR_ECIRC &kp LS(SQT) &kp E   // ^ + e = ê
+#define BR_ICIRC &kp LS(SQT) &kp I   // ^ + i = î  
+#define BR_OCIRC &kp LS(SQT) &kp O   // ^ + o = ô
+#define BR_UCIRC &kp LS(SQT) &kp U   // ^ + u = û
 
 // CARACTERES ESPECIAIS EXTRAS
 #define BR_ORDM &kp RA(N0)   // º (ordinal masculino)
