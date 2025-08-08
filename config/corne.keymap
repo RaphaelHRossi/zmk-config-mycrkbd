@@ -75,7 +75,7 @@
             bindings = <
 BR_TAB      BR_1          BR_2          BR_3          BR_4          BR_5            BR_6      BR_7      BR_8      BR_9       BR_0    BR_DEL
 BR_LSHFT    BR_ACUT       BR_GRV        BR_TILD       BR_CIRC       BR_QUES         BR_LEFT   BR_DOWN   BR_UP     BR_RIGHT   BR_HOME BR_END
-BR_LCTRL    &trans        &trans         &trans       &trans        &trans          &trans    &trans    &trans    &trans     &trans  BR_ESC
+BR_LCTRL    &trans        &trans         &trans       &trans        BR_FSLH          &trans    &trans    &trans    &trans     &trans  BR_ESC
                                         BR_LGUI       &trans        BR_RET          BR_RET    &trans    BR_LALT
             >;
         };
