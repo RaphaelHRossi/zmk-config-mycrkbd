@@ -129,12 +129,33 @@ Layout ABNT2 de referência:
 #define BR_COMM &kp COMMA    // , (vírgula)
 #define BR_DOT &kp DOT       // . (ponto)
 #define BR_SCLN &kp FSLH     // ; (ponto e vírgula)
-// SOLUÇÕES PARA BARRA (/) - teste se a atual não funcionar:
-//#define BR_FSLH &kp SLASH    // / (barra) - OPÇÃO 1: SLASH direto
 
-// Alternativas para barra (descomente se necessário):
-//#define BR_FSLH &forward_slash    // / (barra) - OPÇÃO 2: macro personalizada dispara : ;
-#define BR_FSLH &kp FSLH          // / (barra) - OPÇÃO 3: FSLH direto
+// ============================================================================
+// NOVAS SOLUÇÕES PARA BARRA (/) - RESOLVENDO CONFLITO COM ;
+// ============================================================================
+// PROBLEMA: Todas as opções anteriores disparavam ; em vez de /
+// 
+// ORDEM DE TESTE RECOMENDADA:
+// 1. Teste OPÇÃO 1 (já ativa) - Shift+7
+// 2. Se falhar, teste OPÇÃO 4 - AltGr+7 (específico ABNT2)  
+// 3. Se falhar, teste OPÇÃO 2 - Alt+047 (código ASCII)
+// 4. Continue com as outras opções...
+//
+// TESTE UMA POR VEZ - descomente apenas uma linha:
+
+#define BR_FSLH &slash_option_1   // NOVA OPÇÃO 1: Shift+7 (alguns layouts)
+
+// #define BR_FSLH &slash_option_2   // NOVA OPÇÃO 2: Alt+047 (código ASCII)
+// #define BR_FSLH &slash_option_3   // NOVA OPÇÃO 3: usando BSLH
+// #define BR_FSLH &slash_option_4   // NOVA OPÇÃO 4: AltGr+7 (ABNT2)
+// #define BR_FSLH &slash_option_5   // NOVA OPÇÃO 5: Sequência AltGr+7
+// #define BR_FSLH &slash_option_6   // NOVA OPÇÃO 6: usando EQUAL
+// #define BR_FSLH &slash_option_7   // NOVA OPÇÃO 7: Shift+Comma
+
+// OPÇÕES ANTIGAS (comentadas por causarem conflito):
+// #define BR_FSLH &kp SLASH         // Antiga: causava conflito
+// #define BR_FSLH &forward_slash    // Antiga: causava conflito  
+// #define BR_FSLH &kp FSLH          // Antiga: causava conflito
 
 // CARACTERES COM SHIFT
 #define BR_DQUO &kp LS(N2)   // " (aspas duplas)
