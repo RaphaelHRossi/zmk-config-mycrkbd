@@ -24,8 +24,8 @@ layers:
   - ↓
   - ↑
   - →
-  - '&HOME'
-  - '&END'
+  - Home
+  - End
   - Ctrl
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
