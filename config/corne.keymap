@@ -53,6 +53,49 @@
             #binding-cells = <0>;
             bindings = <&kp SLASH>;
         };
+        
+        // NOVAS SOLUÇÕES PARA BARRA (/) - resolvendo conflito com ;
+        slash_option_1: slash_option_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(N7)>;  // Shift+7 em alguns layouts
+        };
+        
+        slash_option_2: slash_option_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N4 &kp KP_N7>, <&macro_release &kp LALT>;  // Alt+047
+        };
+        
+        slash_option_3: slash_option_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp BSLH>;  // Tentativa com backslash
+        };
+        
+        slash_option_4: slash_option_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(N7)>;  // AltGr+7 no ABNT2
+        };
+        
+        slash_option_5: slash_option_5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp RALT &kp N7>;  // Sequência AltGr+7
+        };
+        
+        slash_option_6: slash_option_6 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp EQUAL>;  // Tentativa usando EQUAL
+        };
+        
+        slash_option_7: slash_option_7 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(COMMA)>;  // Shift+Comma em alguns layouts
+        };
     };
     keymap {
         compatible = "zmk,keymap";
