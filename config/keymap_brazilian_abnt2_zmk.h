@@ -152,7 +152,7 @@ Layout ABNT2 de referência:
 #define BR_PIPE &kp LS(NUBS) // | (pipe)
 #define BR_LABK &kp LS(COMMA) // < (menor que)
 #define BR_RABK &kp LS(DOT)   // > (maior que)
-#define BR_QUES &kp LS(FSLH)  // ? (interrogação) - posição correta no ABNT2
+#define BR_QUES &kp QMARK     // ? (interrogação) - usando código direto
 
 // CARACTERES COM ALTGR (right alt)
 #define BR_SUP2 &kp RA(N2)   // ² (dois ao quadrado)
