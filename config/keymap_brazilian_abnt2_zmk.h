@@ -129,7 +129,12 @@ Layout ABNT2 de referência:
 #define BR_COMM &kp COMMA    // , (vírgula)
 #define BR_DOT &kp DOT       // . (ponto)
 #define BR_SCLN &kp FSLH     // ; (ponto e vírgula)
-#define BR_FSLH &kp Q        // / (barra) - posição correta no ABNT2
+// SOLUÇÕES PARA BARRA (/) - teste se a atual não funcionar:
+#define BR_FSLH &kp SLASH    // / (barra) - OPÇÃO 1: SLASH direto
+
+// Alternativas para barra (descomente se necessário):
+// #define BR_FSLH &forward_slash    // / (barra) - OPÇÃO 2: macro personalizada
+// #define BR_FSLH &kp FSLH          // / (barra) - OPÇÃO 3: FSLH direto
 
 // CARACTERES COM SHIFT
 #define BR_DQUO &kp LS(N2)   // " (aspas duplas)
@@ -167,7 +172,7 @@ Layout ABNT2 de referência:
 
 //#define BR_QUES &question_mark_2  // OPÇÃO 2: Alt+código ASCII 063 dispara : 063
 //#define BR_QUES &question_mark_3  // OPÇÃO 3: Shift+Slash direto  dispara : :
-#define BR_QUES &question_mark_4  // OPÇÃO 4: Alt codes Windows otimizado
+#define BR_QUES &question_mark_4  // OPÇÃO 4: Alt codes Windows otimizado  FUNCIONOU
 // #define BR_QUES &question_mark_5  // OPÇÃO 5: AltGr+W (ABNT2 alternativo)
 
 // OPÇÕES TRADICIONAIS (se as macros não funcionarem):

@@ -46,6 +46,13 @@
             #binding-cells = <0>;
             bindings = <&kp RA(W)>;
         };
+        
+        // Macro para barra (/) - caso seja necessário
+        forward_slash: forward_slash {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp SLASH>;
+        };
     };
     keymap {
         compatible = "zmk,keymap";
