@@ -47,13 +47,13 @@
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
             // |BT CLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | CTRL |VOL -|VOL +|MUTE |PLAY |PAUSE|   |  _  |  +  |  {  |  }  | "|" |  ~   |
+            // | CTRL |VOL -|VOL +|MUTE |PLAY |PAUSE|   |NEXT |PREV |  {  |  }  | "|" |  ~   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
 &kp TAB     &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT           &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
 &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LCTRL   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE    &kp C_PLAY    &kp C_PAUSE         &kp UNDER  &kp PLUS   &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
+&kp LCTRL   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE    &kp C_PLAY    &kp C_PAUSE         &kp C_NEXT &kp C_PREV &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
                                          &kp LGUI   &studio_unlock   &kp SPACE          &kp RET    &studio_unlock     &kp LALT
             >;
         };
