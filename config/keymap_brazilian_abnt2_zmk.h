@@ -145,7 +145,7 @@ Layout ABNT2 de referência:
 
 //#define BR_FSLH &slash_option_1   // NOVA OPÇÃO 1: Shift+7 (alguns layouts) dispara : &
 
-#define BR_FSLH &slash_option_2   // NOVA OPÇÃO 2: Alt+047 (código ASCII)
+#define BR_FSLH &slash_option_2   // NOVA OPÇÃO 2: Alt+047 (código ASCII)  FUNCIONOU
 // #define BR_FSLH &slash_option_3   // NOVA OPÇÃO 3: usando BSLH
 // #define BR_FSLH &slash_option_4   // NOVA OPÇÃO 4: AltGr+7 (ABNT2)
 // #define BR_FSLH &slash_option_5   // NOVA OPÇÃO 5: Sequência AltGr+7
