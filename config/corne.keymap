@@ -11,6 +11,16 @@
 
 /
 {
+    behaviors {
+        uc: uc {
+            compatible = "zmk,behavior-unicode";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+        };
+    };
+};
+
+
     keymap {
         compatible = "zmk,keymap";
 
