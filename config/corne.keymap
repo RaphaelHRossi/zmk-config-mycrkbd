@@ -8,6 +8,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/mouse.h>
+#include "keymap_brazilian_abnt2_zmk.h"
 
 / {
     keymap {
@@ -15,46 +16,46 @@
 
         default_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
+            // | TAB  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  Ç  |  ~   |
             // | CTRL |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  ;  | ESC  |
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-   &kp TAB    &kp Q &kp W &kp E &kp R &kp T      &kp Y &kp U  &kp I     &kp O   &kp P    &kp BSPC
-   &kp LSHFT  &kp A &kp S &kp D &kp F &kp G      &kp H &kp J  &kp K     &kp L   &kp SEMI &kp SQT
-   &kp LCTRL  &kp Z &kp X &kp C &kp V &kp B      &kp N &kp M  &kp COMMA &kp DOT &kp FSLH &kp ESC
-                      &kp LGUI &mo 1 &kp SPACE   &kp RET &mo 2 &kp LALT
+   BR_TAB     BR_Q  BR_W  BR_E  BR_R  BR_T       BR_Y  BR_U  BR_I     BR_O   BR_P    BR_BSPC
+   BR_LSHFT   BR_A  BR_S  BR_D  BR_F  BR_G       BR_H  BR_J  BR_K     BR_L   BR_CEDL BR_TILD
+   BR_LCTRL   BR_Z  BR_X  BR_C  BR_V  BR_B       BR_N  BR_M  BR_COMM  BR_DOT BR_SCLN BR_ESC
+                          BR_LGUI &mo 1 BR_SPACE  BR_RET &mo 2 BR_LALT
             >;
         };
 
         lower_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL |
-            // | SHFT |     |     |     |     |  ?  |   | LFT | DWN |  UP | RGT | HOME| END |
-            // | CTRL |     |     |     |     |  /  |   |     |     |     |     |     |     |
+            // | TAB  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL  |
+            // | SHFT | ´   | `   | ~   | ^   | ?   |   | LFT | DWN |  UP | RGT | HOME| END  |
+            // | CTRL | á   | à   | ã   | â   | /   |   | é   | ê   | í   | ó   | ô   | õ   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp DEL
-&kp LSHFT   &trans        &trans        &trans        &trans        &kp QUESTION       &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &kp HOME  &kp END
-&kp LCTRL   &trans        &trans        &trans        &trans        &kp KP_DIVIDE   &trans    &trans    &trans    &trans     &trans  &trans
-                                        &kp LGUI      &trans        &kp RET         &kp RET   &trans    &kp LALT
+BR_TAB      BR_1          BR_2          BR_3          BR_4          BR_5            BR_6      BR_7      BR_8      BR_9       BR_0    BR_DEL
+BR_LSHFT    BR_ACUT       BR_GRV        BR_TILD       BR_CIRC       BR_QUES         BR_LEFT   BR_DOWN   BR_UP     BR_RIGHT   BR_HOME BR_END
+BR_LCTRL    BR_AACUTE     BR_AGRAVE     BR_ATILDE     BR_ACIRC      &kp FSLH        BR_EACUTE  BR_ECIRC  BR_IACUTE  BR_OACUTE  BR_OCIRC  BR_OTILDE
+                                        BR_LGUI       &trans        BR_RET          BR_RET    &trans    BR_LALT
             >;
         };
 
         raise_layer {
             // -----------------------------------------------------------------------------------------
-            // |  TAB |  !  |  @  |  #  |  $  |  %  |   |  ^  |  &  |  *  |  (  |  )  | BKSP |
-            // |BT CLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |  -  |  =  |  [  |  ]  |  \  |  `   |
-            // | CTRL |VOL -|VOL +|MUTE |PLAY |PAUSE|   |NEXT |PREV |  {  |  }  | "|" |  ~   |
+            // | TAB  |  !  |  @  |  #  |  $  |  %  |   |  ¨  |  &  |  *  |  (  |  )  | BKSP |
+            // |BT CLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |  -  |  =  |  [  |  ]  |  \  |  '   |
+            // | CTRL |VOL -|VOL +|MUTE |PLAY |PAUSE|   |NEXT |PREV |  {  |  }  | "|" |  +   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp EXCL      &kp AT        &kp HASH      &kp DLLR      &kp PRCNT           &kp CARET  &kp AMPS   &kp KP_MULTIPLY  &kp LPAR  &kp RPAR  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        &kp MINUS  &kp EQUAL  &kp LBKT         &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LCTRL   &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE    &kp C_PLAY    &kp C_PAUSE         &kp C_NEXT &kp C_PREV &kp LBRC         &kp RBRC  &kp PIPE  &kp TILDE
-                                         &kp LGUI   &studio_unlock   &kp SPACE          &kp RET    &studio_unlock     &kp LALT
+BR_TAB      &kp EXCL      BR_AT         BR_HASH       BR_DLR        BR_PERC             BR_CARET   BR_AMPR    BR_ASTR      BR_LPAR   BR_RPAR   BR_BSPC
+&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        BR_MINUS   BR_EQUAL   BR_LBKT      BR_RBKT   BR_BSLH   BR_QUOT
+BR_LCTRL    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE    &kp C_PLAY    &kp C_PAUSE         &kp C_NEXT &kp C_PREV BR_LCBR      BR_RCBR   BR_PIPE   BR_PLUS
+                                         BR_LGUI    &studio_unlock   BR_SPACE           BR_RET     &studio_unlock     BR_LALT
             >;
         };
     };
