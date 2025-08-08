@@ -15,7 +15,7 @@ layers:
   - '0'
   - ⌦
   - Shift
-  - ACUTE
+  - '&uc 0x00B4'
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
