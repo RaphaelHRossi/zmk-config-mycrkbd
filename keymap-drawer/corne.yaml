@@ -70,11 +70,11 @@ layers:
   - \
   - '`'
   - Ctrl
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
+  - Vol Down
+  - Vol Up
+  - MUTE
+  - PLAY
+  - PAUSE
   - _
   - +
   - '{'
