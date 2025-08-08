@@ -15,11 +15,11 @@ layers:
   - '0'
   - ⌫
   - BT CLR
-  - BT 1
-  - BT 2
-  - BT 3
-  - BT 4
-  - BT 5
+  - BT(0)
+  - BT(1)
+  - BT(2)
+  - BT(3)
+  - BT(4)
   - ←
   - ↓
   - ↑
