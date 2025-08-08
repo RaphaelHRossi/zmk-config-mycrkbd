@@ -26,7 +26,7 @@ layers:
   - →
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
-  - Shift
+  - Ctrl
   - '6'
   - '7'
   - '8'
@@ -57,7 +57,7 @@ layers:
   - (
   - )
   - ⌫
-  - Ctrl
+  - Shift
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - '&mkp LCLK'
@@ -69,7 +69,7 @@ layers:
   - ']'
   - \
   - '`'
-  - Shift
+  - Ctrl
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
