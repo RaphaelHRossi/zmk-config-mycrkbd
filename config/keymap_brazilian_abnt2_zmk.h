@@ -152,7 +152,12 @@ Layout ABNT2 de referência:
 #define BR_PIPE &kp LS(NUBS) // | (pipe)
 #define BR_LABK &kp LS(COMMA) // < (menor que)
 #define BR_RABK &kp LS(DOT)   // > (maior que)
-#define BR_QUES &kp QMARK     // ? (interrogação) - usando código direto
+// Solução direta para interrogação
+//#define BR_QUES &kp LS(SLASH)  // ? (interrogação) usando Shift+Slash - funciona na maioria dos layouts
+
+// Alternativa usando Unicode direto (caso a primeira opção não funcione)
+// Descomente a linha abaixo e comente a linha acima se necessário
+#define BR_QUES &kp U003F  // ? (interrogação) Unicode U+003F direto
 
 // CARACTERES COM ALTGR (right alt)
 #define BR_SUP2 &kp RA(N2)   // ² (dois ao quadrado)
