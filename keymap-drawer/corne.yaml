@@ -15,7 +15,7 @@ layers:
   - '0'
   - ⌦
   - Shift
-  - {t: ▽, type: trans}
+  - ACUTE
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
