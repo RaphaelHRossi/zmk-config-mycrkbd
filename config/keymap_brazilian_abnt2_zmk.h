@@ -163,9 +163,9 @@ Layout ABNT2 de referência:
 // 5. Se não funcionar, tente a próxima opção
 // ============================================================================
 
-#define BR_QUES &question_mark_1  // OPÇÃO 1: Shift+W (posição tradicional ABNT2)
+//#define BR_QUES &question_mark_1  // OPÇÃO 1: Shift+W (posição tradicional ABNT2)
 
-// #define BR_QUES &question_mark_2  // OPÇÃO 2: Alt+código ASCII 063
+#define BR_QUES &question_mark_2  // OPÇÃO 2: Alt+código ASCII 063
 // #define BR_QUES &question_mark_3  // OPÇÃO 3: Shift+Slash direto  
 // #define BR_QUES &question_mark_4  // OPÇÃO 4: Alt codes Windows otimizado
 // #define BR_QUES &question_mark_5  // OPÇÃO 5: AltGr+W (ABNT2 alternativo)
