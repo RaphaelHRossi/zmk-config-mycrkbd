@@ -152,12 +152,27 @@ Layout ABNT2 de referência:
 #define BR_PIPE &kp LS(NUBS) // | (pipe)
 #define BR_LABK &kp LS(COMMA) // < (menor que)
 #define BR_RABK &kp LS(DOT)   // > (maior que)
-// Solução direta para interrogação
-//#define BR_QUES &kp LS(SLASH)  // ? (interrogação) usando Shift+Slash - funciona na maioria dos layouts
+// ============================================================================
+// MÚLTIPLAS SOLUÇÕES PARA INTERROGAÇÃO (?) - TESTE UMA POR VEZ!
+// ============================================================================
+// INSTRUÇÕES:
+// 1. Descomente APENAS UMA das opções abaixo 
+// 2. Comente a opção que estava ativa antes
+// 3. Recompile o firmware
+// 4. Teste no teclado
+// 5. Se não funcionar, tente a próxima opção
+// ============================================================================
 
-// Alternativa usando Unicode direto (caso a primeira opção não funcione)
-// Descomente a linha abaixo e comente a linha acima se necessário
-#define BR_QUES &kp U003F  // ? (interrogação) Unicode U+003F direto
+#define BR_QUES &question_mark_1  // OPÇÃO 1: Shift+W (posição tradicional ABNT2)
+
+// #define BR_QUES &question_mark_2  // OPÇÃO 2: Alt+código ASCII 063
+// #define BR_QUES &question_mark_3  // OPÇÃO 3: Shift+Slash direto  
+// #define BR_QUES &question_mark_4  // OPÇÃO 4: Alt codes Windows otimizado
+// #define BR_QUES &question_mark_5  // OPÇÃO 5: AltGr+W (ABNT2 alternativo)
+
+// OPÇÕES TRADICIONAIS (se as macros não funcionarem):
+// #define BR_QUES &kp QMARK         // OPÇÃO 6: Código direto QMARK
+// #define BR_QUES &kp LS(W)         // OPÇÃO 7: Shift+W direto
 
 // CARACTERES COM ALTGR (right alt)
 #define BR_SUP2 &kp RA(N2)   // ² (dois ao quadrado)

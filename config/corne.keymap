@@ -11,6 +11,42 @@
 #include "keymap_brazilian_abnt2_zmk.h"
 
 / {
+    macros {
+        // Macro para interrogação - abordagem 1: simulando Shift+W no ABNT2
+        question_mark_1: question_mark_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(W)>;
+        };
+        
+        // Macro para interrogação - abordagem 2: Alt + código ASCII
+        question_mark_2: question_mark_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LALT &kp KP_N0 &kp KP_N6 &kp KP_N3 &kp LALT>;
+        };
+        
+        // Macro para interrogação - abordagem 3: sequência direta
+        question_mark_3: question_mark_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_tap &kp LS(SLASH)>;
+        };
+        
+        // Macro para interrogação - abordagem 4: Windows ALT codes
+        question_mark_4: question_mark_4 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0 &kp KP_N6 &kp KP_N3>, <&macro_release &kp LALT>;
+        };
+        
+        // Macro para interrogação - abordagem 5: usando Right Alt
+        question_mark_5: question_mark_5 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp RA(W)>;
+        };
+    };
     keymap {
         compatible = "zmk,keymap";
 
