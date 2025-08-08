@@ -130,10 +130,10 @@ Layout ABNT2 de referência:
 #define BR_DOT &kp DOT       // . (ponto)
 #define BR_SCLN &kp FSLH     // ; (ponto e vírgula)
 // SOLUÇÕES PARA BARRA (/) - teste se a atual não funcionar:
-#define BR_FSLH &kp SLASH    // / (barra) - OPÇÃO 1: SLASH direto
+//#define BR_FSLH &kp SLASH    // / (barra) - OPÇÃO 1: SLASH direto
 
 // Alternativas para barra (descomente se necessário):
-// #define BR_FSLH &forward_slash    // / (barra) - OPÇÃO 2: macro personalizada
+#define BR_FSLH &forward_slash    // / (barra) - OPÇÃO 2: macro personalizada
 // #define BR_FSLH &kp FSLH          // / (barra) - OPÇÃO 3: FSLH direto
 
 // CARACTERES COM SHIFT
