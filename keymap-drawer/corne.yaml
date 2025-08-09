@@ -89,7 +89,7 @@ layers:
   - Alt
   game:
   - Esc
-  - {t: ▽, type: trans}
+  - '1'
   - Q
   - W
   - E
