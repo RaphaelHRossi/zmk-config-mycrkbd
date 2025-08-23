@@ -19,6 +19,43 @@
             key-positions = <37 40>; // LWR + RSE
             bindings = <&tog 3>; // Toggle GAME layer (layer 3)
         };
+
+        // Bluetooth Controls - Combos para evitar ativação acidental
+        bt_clear: bt_clear {
+            timeout-ms = <100>;
+            key-positions = <0 11>; // Tab + Backspace
+            bindings = <&bt BT_CLR>;
+        };
+
+        bt_profile_1: bt_profile_1 {
+            timeout-ms = <100>;
+            key-positions = <0 13>; // Tab + 1 (no lower layer)
+            bindings = <&bt BT_SEL 0>;
+        };
+
+        bt_profile_2: bt_profile_2 {
+            timeout-ms = <100>;
+            key-positions = <0 14>; // Tab + 2 (no lower layer)
+            bindings = <&bt BT_SEL 1>;
+        };
+
+        bt_profile_3: bt_profile_3 {
+            timeout-ms = <100>;
+            key-positions = <0 15>; // Tab + 3 (no lower layer)
+            bindings = <&bt BT_SEL 2>;
+        };
+
+        bt_profile_4: bt_profile_4 {
+            timeout-ms = <100>;
+            key-positions = <0 16>; // Tab + 4 (no lower layer)
+            bindings = <&bt BT_SEL 3>;
+        };
+
+        bt_profile_5: bt_profile_5 {
+            timeout-ms = <100>;
+            key-positions = <0 17>; // Tab + 5 (no lower layer)
+            bindings = <&bt BT_SEL 4>;
+        };
     };
     macros {
         // Macro para interrogação - abordagem 1: simulando Shift+W no ABNT2
@@ -142,13 +179,17 @@ BR_LCTRL    &trans        &trans         &trans       &trans        BR_FSLH     
         raise_layer {
             // -----------------------------------------------------------------------------------------
             // | TAB  |  !  |  @  |  #  |  $  |  %  |   |  ¨  |  &  |  *  |  (  |  )  | BKSP |
-            // |BT CLR| BT1 | BT2 | BT3 | BT4 | BT5 |   |  -  |  =  |  [  |  ]  |  \  |  '   |
+            // | F1   | F2  | F3  | F4  | F5  | F6  |   |  -  |  =  |  [  |  ]  |  \  |  '   |
             // | CTRL |VOL -|VOL +|MUTE |PLAY |PAUSE|   |NEXT |PREV |  {  |  }  | "|" |  +   |
             //                    | GUI |     | SPC |   | ENT |     | ALT |
+            // 
+            // Bluetooth controls moved to combos:
+            // Tab + Backspace = BT Clear
+            // Tab + 1-5 (in lower layer) = BT Profiles 1-5
 
             bindings = <
 BR_TAB      &kp EXCL      BR_AT         BR_HASH       BR_DLR        BR_PERC             BR_CARET   BR_AMPR    BR_ASTR      BR_LPAR   BR_RPAR   BR_BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4        BR_MINUS   BR_EQUAL   BR_LBKT      BR_RBKT   BR_BSLH   BR_QUOT
+&kp F1      &kp F2        &kp F3        &kp F4        &kp F5        &kp F6              BR_MINUS   BR_EQUAL   BR_LBKT      BR_RBKT   BR_BSLH   BR_QUOT
 BR_LCTRL    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE    &kp C_PLAY    &kp C_PAUSE         &kp C_NEXT &kp C_PREV BR_LCBR      BR_RCBR   BR_PIPE   BR_PLUS
                                          BR_LGUI    &studio_unlock   BR_SPACE           BR_RET     &studio_unlock     BR_LALT
             >;
