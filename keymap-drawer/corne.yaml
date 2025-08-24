@@ -45,24 +45,24 @@ layers:
   - {t: ▽, type: trans}
   - Alt
   raise:
-  - ↹
-  - '!'
-  - Sft+3
-  - Sft+4
-  - Sft+5
-  - Sft+6
-  - Sft+7
-  - Sft+8
-  - Sft+9
-  - Sft+0
-  - Sft+-
-  - ⌫
   - F1
   - F2
   - F3
   - F4
   - F5
   - F6
+  - F7
+  - F8
+  - F9
+  - F10
+  - F11
+  - F12
+  - Caps Lock
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - Print Scrn
   - '-'
   - '='
   - ']'
