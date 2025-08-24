@@ -57,12 +57,12 @@ layers:
   - Sft+0
   - Sft+-
   - ⌫
-  - BT CLR
-  - BT 1
-  - BT 2
-  - BT 3
-  - BT 4
-  - BT 5
+  - F1
+  - F2
+  - F3
+  - F4
+  - F5
+  - F6
   - '-'
   - '='
   - ']'
@@ -133,3 +133,15 @@ layers:
 combos:
 - p: [37, 40]
   k: {t: game, h: toggle}
+- p: [0, 11]
+  k: BT CLR
+- p: [0, 13]
+  k: BT 1
+- p: [0, 14]
+  k: BT 2
+- p: [0, 15]
+  k: BT 3
+- p: [0, 16]
+  k: BT 4
+- p: [0, 17]
+  k: BT 5
