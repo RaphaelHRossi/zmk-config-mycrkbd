@@ -29,31 +29,31 @@
 
         bt_profile_1: bt_profile_1 {
             timeout-ms = <100>;
-            key-positions = <0 13>; // Tab + 1 (no lower layer)
+            key-positions = <0 1>; // Tab + Q = Perfil 1
             bindings = <&bt BT_SEL 0>;
         };
 
         bt_profile_2: bt_profile_2 {
             timeout-ms = <100>;
-            key-positions = <0 14>; // Tab + 2 (no lower layer)
+            key-positions = <0 2>; // Tab + W = Perfil 2
             bindings = <&bt BT_SEL 1>;
         };
 
         bt_profile_3: bt_profile_3 {
             timeout-ms = <100>;
-            key-positions = <0 15>; // Tab + 3 (no lower layer)
+            key-positions = <0 3>; // Tab + E = Perfil 3
             bindings = <&bt BT_SEL 2>;
         };
 
         bt_profile_4: bt_profile_4 {
             timeout-ms = <100>;
-            key-positions = <0 16>; // Tab + 4 (no lower layer)
+            key-positions = <0 4>; // Tab + R = Perfil 4
             bindings = <&bt BT_SEL 3>;
         };
 
         bt_profile_5: bt_profile_5 {
             timeout-ms = <100>;
-            key-positions = <0 17>; // Tab + 5 (no lower layer)
+            key-positions = <0 5>; // Tab + T = Perfil 5
             bindings = <&bt BT_SEL 4>;
         };
     };
@@ -185,7 +185,7 @@ BR_LCTRL    &trans        &trans         &trans       &trans        BR_FSLH     
             // 
             // Bluetooth controls moved to combos:
             // Tab + Backspace = BT Clear
-            // Tab + 1-5 (in lower layer) = BT Profiles 1-5
+            // Tab + Q/W/E/R/T = BT Profiles 1/2/3/4/5
 
             bindings = <
 BR_TAB      &kp EXCL      BR_AT         BR_HASH       BR_DLR        BR_PERC             BR_CARET   BR_AMPR    BR_ASTR      BR_LPAR   BR_RPAR   BR_BSPC
