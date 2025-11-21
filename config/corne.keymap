@@ -206,6 +206,21 @@ BR_LCTRL    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE    &kp C_PLAY    &kp C_PAUSE 
     BR_ESC    BR_1      BR_Q     BR_W     BR_E     BR_R           BR_T     BR_Y     BR_U     BR_I     BR_O     BR_P
     BR_TAB    BR_LSHFT  BR_A     BR_S     BR_D     BR_F           BR_G     BR_H     BR_J     BR_K     BR_L     BR_CEDL
     BR_LALT   BR_LCTRL  BR_Z     BR_X     BR_C     BR_V           BR_B     BR_N     BR_M     BR_COMM  BR_DOT   &trans
+                                 BR_LGUI  &mo 4    BR_SPACE       BR_RET   &trans   BR_BSPC
+            >;
+        };
+
+        // Layer 4: Game layer com números na linha superior (ativada com LWR na game_layer)
+        game_lower_layer {
+            // -----------------------------------------------------------------------------------------
+            // | ESC  |  1     |  2  |  3  |  4  |  5  |   |  6  |  7   |  8  |  9  |  0  |  P  |
+            // | SHFT |  SHFT  |  A  |  S  |  D  |  F  |   |  G  |  H   |  J  |  K  |  L  |  Ç  |
+            // | CTRL |  CTRL  |  Z  |  X  |  C  |  V  |   |  B  |  N   |  M  |  ,  |  .  | ESC |
+            //                       | GUI |     | SPC |   | ENT | RSE  |BKSP |
+            bindings = <
+    BR_ESC    BR_1      BR_2     BR_3     BR_4     BR_5           BR_6     BR_7     BR_8     BR_9     BR_0     BR_P
+    BR_TAB    BR_LSHFT  BR_A     BR_S     BR_D     BR_F           BR_G     BR_H     BR_J     BR_K     BR_L     BR_CEDL
+    BR_LALT   BR_LCTRL  BR_Z     BR_X     BR_C     BR_V           BR_B     BR_N     BR_M     BR_COMM  BR_DOT   &trans
                                  BR_LGUI  &trans   BR_SPACE       BR_RET   &trans   BR_BSPC
             >;
         };
