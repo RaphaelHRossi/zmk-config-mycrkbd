@@ -93,6 +93,13 @@
             bindings = <&kp RA(W)>;
         };
         
+        // Macro para interrogação - abordagem 6: Windows 11 ABNT2 otimizado
+        question_mark_win11: question_mark_win11 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp W>, <&macro_release &kp LSHFT>;
+        };
+        
         // Macro para barra (/) - caso seja necessário
         forward_slash: forward_slash {
             compatible = "zmk,behavior-macro";

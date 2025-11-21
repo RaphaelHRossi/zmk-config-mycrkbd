@@ -189,16 +189,17 @@ Layout ABNT2 de referência:
 // 5. Se não funcionar, tente a próxima opção
 // ============================================================================
 
-//#define BR_QUES &question_mark_1  // OPÇÃO 1: Shift+W (posição tradicional ABNT2)
+//#define BR_QUES &question_mark_1  // OPÇÃO 1: Shift+W via macro (posição tradicional ABNT2)
 
 //#define BR_QUES &question_mark_2  // OPÇÃO 2: Alt+código ASCII 063 dispara : 063
 //#define BR_QUES &question_mark_3  // OPÇÃO 3: Shift+Slash direto  dispara : :
-#define BR_QUES &question_mark_4  // OPÇÃO 4: Alt codes Windows otimizado  FUNCIONOU
+//#define BR_QUES &question_mark_4  // OPÇÃO 4: Alt codes Windows otimizado (não funcionou no Win11)
 // #define BR_QUES &question_mark_5  // OPÇÃO 5: AltGr+W (ABNT2 alternativo)
+// #define BR_QUES &question_mark_win11  // OPÇÃO 6: Windows 11 ABNT2 otimizado (macro com press/release)
 
 // OPÇÕES TRADICIONAIS (se as macros não funcionarem):
-// #define BR_QUES &kp QMARK         // OPÇÃO 6: Código direto QMARK
-// #define BR_QUES &kp LS(W)         // OPÇÃO 7: Shift+W direto
+// #define BR_QUES &kp QMARK         // OPÇÃO 7: Código direto QMARK
+#define BR_QUES &kp LS(W)         // OPÇÃO 8: Shift+W direto - FUNCIONA NO WINDOWS 11 ABNT2
 
 // CARACTERES COM ALTGR (right alt)
 #define BR_SUP2 &kp RA(N2)   // ² (dois ao quadrado)
