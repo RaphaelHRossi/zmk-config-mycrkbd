@@ -191,15 +191,17 @@ Layout ABNT2 de referência:
 
 //#define BR_QUES &question_mark_1  // OPÇÃO 1: Shift+W via macro simples (não funcionou)
 
-//#define BR_QUES &question_mark_2  // OPÇÃO 2: Alt+código ASCII 063 dispara : 063
+//#define BR_QUES &question_mark_2  // OPÇÃO 2: Alt+código ASCII 063 (versão antiga)
 //#define BR_QUES &question_mark_3  // OPÇÃO 3: Shift+Slash direto  dispara : :
 //#define BR_QUES &question_mark_4  // OPÇÃO 4: Alt codes Windows otimizado (não funcionou no Win11)
 // #define BR_QUES &question_mark_5  // OPÇÃO 5: AltGr+W (ABNT2 alternativo)
-#define BR_QUES &question_mark_win11  // OPÇÃO 6: Windows 11 ABNT2 otimizado (macro com press/release) - ATIVA AGORA
+//#define BR_QUES &question_mark_win11  // OPÇÃO 6: Left Shift+W (não funcionou - sai W maiúsculo)
+//#define BR_QUES &question_mark_rshift  // OPÇÃO 7: Right Shift+W (teste esta alternativa)
+#define BR_QUES &question_mark_alt063  // OPÇÃO 8: Alt+063 (código ASCII) - TESTE ESTA PRIMEIRO
 
 // OPÇÕES TRADICIONAIS (se as macros não funcionarem):
-// #define BR_QUES &kp QMARK         // OPÇÃO 7: Código direto QMARK (teste se a opção 6 não funcionar)
-// #define BR_QUES &kp LS(W)         // OPÇÃO 8: Shift+W direto - NÃO FUNCIONOU (sai apenas W)
+// #define BR_QUES &kp QMARK         // OPÇÃO 9: Código direto QMARK (teste se a opção 8 não funcionar)
+// #define BR_QUES &kp LS(W)         // OPÇÃO 10: Shift+W direto - NÃO FUNCIONOU (sai apenas W)
 
 // CARACTERES COM ALTGR (right alt)
 #define BR_SUP2 &kp RA(N2)   // ² (dois ao quadrado)

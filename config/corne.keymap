@@ -100,6 +100,20 @@
             bindings = <&macro_press &kp LSHFT>, <&macro_tap &kp W>, <&macro_release &kp LSHFT>;
         };
         
+        // Macro para interrogação - abordagem 7: Alt+063 (código ASCII) - Windows 11 ABNT2
+        question_mark_alt063: question_mark_alt063 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LALT>, <&macro_tap &kp KP_N0>, <&macro_tap &kp KP_N6>, <&macro_tap &kp KP_N3>, <&macro_release &kp LALT>;
+        };
+        
+        // Macro para interrogação - abordagem 8: Right Shift + W (alternativa)
+        question_mark_rshift: question_mark_rshift {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp RSHFT>, <&macro_tap &kp W>, <&macro_release &kp RSHFT>;
+        };
+        
         // Macro para barra (/) - caso seja necessário
         forward_slash: forward_slash {
             compatible = "zmk,behavior-macro";
