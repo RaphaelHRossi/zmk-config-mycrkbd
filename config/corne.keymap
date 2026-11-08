@@ -86,16 +86,17 @@
 BR_TAB      BR_1          BR_2          BR_3          BR_4          BR_5            BR_6      BR_7      BR_8      BR_9       BR_0    BR_DEL
 BR_LSHFT    BR_ACUT       BR_GRV        BR_TILD       BR_CIRC       BR_QUES         BR_LEFT   BR_DOWN   BR_UP     BR_RIGHT   BR_HOME BR_END
 BR_LCTRL    &trans        &trans         &trans       &trans        BR_FSLH          &trans    &trans    &trans    &trans     &trans  BR_ESC
-                                        BR_LGUI       &trans        BR_RET          BR_RET    &trans    BR_LALT
+                                        BR_LGUI       &trans        BR_SPACE        BR_RET    &trans    BR_LALT
             >;
         };
 
         raise_layer {
             // -----------------------------------------------------------------------------------------
-            // | TAB  |  !  |  @  |  #  |  $  |  %  |   |  ¨  |  &  |  *  |  (  |  )  | BKSP |
-            // | F1   | F2  | F3  | F4  | F5  | F6  |   |  -  |  =  |  [  |  ]  |  \  |  '   |
-            // | CTRL |VOL -|VOL +|MUTE |PLAY |PAUSE|   |NEXT |PREV |  {  |  }  | "|" |  +   |
-            //                    | GUI |     | SPC |   | ENT |     | ALT |
+            // | F1   | F2  | F3  | F4  | F5  | F6  |   | F7  | F8  | F9  | F10 | F11 | F12  |
+            // | CAPS |     |     |     |     |PRTSC|   |  -  |  =  |  [  |  ]  |  \  |  '   |
+            // | CTRL |VOL -|VOL +|MUTE |PLAY |PAUSE|   |NEXT |PREV |  {  |  }  |  |  |  +   |
+            //                    | GUI |STUDIO| SPC |  | ENT |STUDIO| ALT |
+            //   STUDIO = desbloqueia o ZMK Studio (editor de keymap pelo navegador)
             // 
             // Bluetooth controls moved to combos:
             // Tab + Backspace = BT Clear
@@ -113,9 +114,10 @@ BR_LCTRL    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE    &kp C_PLAY    &kp C_PAUSE 
         game_layer {
             // -----------------------------------------------------------------------------------------
             // | ESC  |    1   |  Q  |  W  |  E  |  R  |   |  T  |  Y   |  U  |  I  |  O  |  P  |
-            // | SHFT |  SHFT  |  A  |  S  |  D  |  F  |   |  G  |  H   |  J  |  K  |  L  |  Ç  |
-            // | CTRL |  CTRL  |  Z  |  X  |  C  |  V  |   |  B  |  N   |  M  |  ,  |  .  | ESC |
-            //                       | GUI | LWR | SPC |   | ENT | RSE  |BKSP |
+            // | TAB  |  SHFT  |  A  |  S  |  D  |  F  |   |  G  |  H   |  J  |  K  |  L  |  Ç  |
+            // | ALT  |  CTRL  |  Z  |  X  |  C  |  V  |   |  B  |  N   |  M  |  ,  |  .  |     |
+            //                       | GUI |G-NUM| SPC |   | ENT |      |BKSP |
+            //   G-NUM = segurar para a camada game_lower (números)
             bindings = <
     BR_ESC    BR_1      BR_Q     BR_W     BR_E     BR_R           BR_T     BR_Y     BR_U     BR_I     BR_O     BR_P
     BR_TAB    BR_LSHFT  BR_A     BR_S     BR_D     BR_F           BR_G     BR_H     BR_J     BR_K     BR_L     BR_CEDL
@@ -128,9 +130,9 @@ BR_LCTRL    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE    &kp C_PLAY    &kp C_PAUSE 
         game_lower_layer {
             // -----------------------------------------------------------------------------------------
             // | ESC  |  1     |  2  |  3  |  4  |  5  |   |  6  |  7   |  8  |  9  |  0  |  P  |
-            // | SHFT |  SHFT  |  A  |  S  |  D  |  F  |   |  G  |  H   |  J  |  K  |  L  |  Ç  |
-            // | CTRL |  CTRL  |  Z  |  X  |  C  |  V  |   |  B  |  N   |  M  |  ,  |  .  | ESC |
-            //                       | GUI |     | SPC |   | ENT | RSE  |BKSP |
+            // | TAB  |  SHFT  |  A  |  S  |  D  |  F  |   |  G  |  H   |  J  |  K  |  L  |  Ç  |
+            // | ALT  |  CTRL  |  Z  |  X  |  C  |  V  |   |  B  |  N   |  M  |  ,  |  .  |     |
+            //                       | GUI |     | SPC |   | ENT |      |BKSP |
             bindings = <
     BR_ESC    BR_1      BR_2     BR_3     BR_4     BR_5           BR_6     BR_7     BR_8     BR_9     BR_0     BR_P
     BR_TAB    BR_LSHFT  BR_A     BR_S     BR_D     BR_F           BR_G     BR_H     BR_J     BR_K     BR_L     BR_CEDL
