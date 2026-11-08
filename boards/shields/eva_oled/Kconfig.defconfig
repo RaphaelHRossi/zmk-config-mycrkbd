@@ -36,6 +36,12 @@ endchoice
 config LV_Z_MEM_POOL_SIZE
     default 4096
 
+config LV_USE_IMG
+    default y
+
+config LV_USE_CANVAS
+    default y
+
 if !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
 
 config ZMK_WPM
