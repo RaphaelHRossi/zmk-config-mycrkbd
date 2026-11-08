@@ -1,14 +1,26 @@
 /* ========================================
 FileName: keymap_brazilian_abnt2_zmk.h
-Date: $(date)
-Author: ZMK Brazilian Layout
-Brief: define keymap for Brazilian ABNT2 layout on ZMK
-Use: in your keymap file, include this file
-     #include "keymap_brazilian_abnt2_zmk.h"
+Brief: keycodes para o layout Português (Brasil ABNT2) no ZMK
+Use: #include "keymap_brazilian_abnt2_zmk.h" no seu .keymap
 ===========================================
 
-Este arquivo mapeia as teclas do layout ABNT2 brasileiro para funcionar
-corretamente com o ZMK, considerando que o OS está configurado para PT-BR.
+COMO FUNCIONA
+O teclado NÃO envia caracteres, envia a POSIÇÃO da tecla (HID usage).
+Quem transforma posição em caractere é o sistema operacional, de acordo com
+o layout configurado. Este arquivo assume que o SO está em
+"Português (Brasil ABNT2)" e diz qual POSIÇÃO enviar para cada caractere.
+
+As duas teclas que não existem num teclado americano:
+  \ |  -> NUBS  (HID 0x64, a tecla ao lado do Shift esquerdo no ABNT2)
+  / ?  -> INT1  (HID 0x87, a tecla ao lado do Shift direito no ABNT2)
+
+NUNCA use &kp SLASH / FSLH / QMARK para / e ?: no ABNT2 essa posição é ; e :
+NUNCA use códigos Alt+numpad (Alt+047, Alt+063): dependem do NumLock e do
+aplicativo, e quando falham o Alt vira atalho (abre menu, dispara comandos).
+
+Obs.: INT1 exige o relatório HKRO (padrão do ZMK). Se um dia ativar
+CONFIG_ZMK_HID_REPORT_TYPE_NKRO, ative também
+CONFIG_ZMK_HID_KEYBOARD_NKRO_EXTENDED_REPORT=y, senão / e ? param de funcionar.
 
 Layout ABNT2 de referência:
 ┌───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬───┬─────┐
@@ -17,11 +29,9 @@ Layout ABNT2 de referência:
 │     │ Q │ W │ E │ R │ T │ Y │ U │ I │ O │ P │ ´ │ [ │   │
 ├─────┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┬──┴┐  │
 │      │ A │ S │ D │ F │ G │ H │ J │ K │ L │ Ç │ ~ │ ] │  │
-├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴───┴──┤
-│    │ \ │ Z │ X │ C │ V │ B │ N │ M │ , │ . │ ; │        │
-├────┼───┴┬──┴─┬─┴───┴───┴───┴───┴───┴──┬┴───┼───┴┬────┬───┤
-│    │    │    │                        │    │    │    │   │
-└────┴────┴────┴────────────────────────┴────┴────┴────┴───┘
+├────┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴─┬─┴──┤
+│    │ \ │ Z │ X │ C │ V │ B │ N │ M │ , │ . │ ; │ / │    │
+└────┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴───┴────┘
 */
 
 #pragma once
@@ -29,239 +39,146 @@ Layout ABNT2 de referência:
 #define XXX &none
 #define ___ &trans
 
-// CONTROL CMD/WINDOWS SHIFT ALT/META/OPTION
-#define BR_LCTRL &kp LCTRL // left control
-#define BR_RCTRL &kp RCTRL // right control
-#define BR_LGUI &kp LGUI   // left cmd/windows
-#define BR_RGUI &kp RGUI   // right cmd/windows
-#define BR_LALT &kp LALT   // left alt
-#define BR_RALT &kp RALT   // right alt (AltGr)
-#define BR_LSHFT &kp LSHFT // left shift
-#define BR_RSHFT &kp RSHFT // right shift
+// MODIFICADORES
+#define BR_LCTRL &kp LCTRL
+#define BR_RCTRL &kp RCTRL
+#define BR_LGUI  &kp LGUI
+#define BR_RGUI  &kp RGUI
+#define BR_LALT  &kp LALT
+#define BR_RALT  &kp RALT   // AltGr
+#define BR_LSHFT &kp LSHFT
+#define BR_RSHFT &kp RSHFT
 
-// ARROWS
-#define BR_UP &kp UP
-#define BR_LEFT &kp LEFT
-#define BR_DOWN &kp DOWN
+// SETAS
+#define BR_UP    &kp UP
+#define BR_LEFT  &kp LEFT
+#define BR_DOWN  &kp DOWN
 #define BR_RIGHT &kp RIGHT
 
 // SPACE CAPS TAB ENTER BACKSPACE ESCAPE DELETE
-#define BR_SPACE &kp SPACE // Space
-#define BR_CAPS &kp CAPS   // Caps Lock
-#define BR_BSPC &kp BSPC   // Backspace
-#define BR_RET &kp RET     // Enter
-#define BR_TAB &kp TAB     // Tab
-#define BR_ESC &kp ESC     // Escape
-#define BR_DEL &kp DEL     // Delete
+#define BR_SPACE &kp SPACE
+#define BR_CAPS  &kp CAPS
+#define BR_BSPC  &kp BSPC
+#define BR_RET   &kp RET
+#define BR_TAB   &kp TAB
+#define BR_ESC   &kp ESC
+#define BR_DEL   &kp DEL
 
 // PAGE UP PAGE DOWN HOME END
 #define BR_PG_UP &kp PG_UP
 #define BR_PG_DN &kp PG_DN
-#define BR_HOME &kp HOME
-#define BR_END &kp END
+#define BR_HOME  &kp HOME
+#define BR_END   &kp END
 
-// FUNCTION KEYS
-#define BR_F1 &kp F1
-#define BR_F2 &kp F2
-#define BR_F3 &kp F3
-#define BR_F4 &kp F4
-#define BR_F5 &kp F5
-#define BR_F6 &kp F6
-#define BR_F7 &kp F7
-#define BR_F8 &kp F8
-#define BR_F9 &kp F9
+// TECLAS DE FUNÇÃO
+#define BR_F1  &kp F1
+#define BR_F2  &kp F2
+#define BR_F3  &kp F3
+#define BR_F4  &kp F4
+#define BR_F5  &kp F5
+#define BR_F6  &kp F6
+#define BR_F7  &kp F7
+#define BR_F8  &kp F8
+#define BR_F9  &kp F9
 #define BR_F10 &kp F10
 #define BR_F11 &kp F11
 #define BR_F12 &kp F12
 
-// NÚMEROS DA LINHA SUPERIOR
-#define BR_1 &kp N1       // 1
-#define BR_2 &kp N2       // 2
-#define BR_3 &kp N3       // 3
-#define BR_4 &kp N4       // 4
-#define BR_5 &kp N5       // 5
-#define BR_6 &kp N6       // 6
-#define BR_7 &kp N7       // 7
-#define BR_8 &kp N8       // 8
-#define BR_9 &kp N9       // 9
-#define BR_0 &kp N0       // 0
-
-// CARACTERES ESPECIAIS DA LINHA SUPERIOR
-#define BR_QUOT &kp GRAVE    // ' (aspas simples/crase)
-#define BR_MINUS &kp MINUS   // - (hífen)
-#define BR_EQUAL &kp EQUAL   // = (igual)
+// NÚMEROS
+#define BR_1 &kp N1
+#define BR_2 &kp N2
+#define BR_3 &kp N3
+#define BR_4 &kp N4
+#define BR_5 &kp N5
+#define BR_6 &kp N6
+#define BR_7 &kp N7
+#define BR_8 &kp N8
+#define BR_9 &kp N9
+#define BR_0 &kp N0
 
 // LETRAS
-#define BR_Q &kp Q       // Q
-#define BR_W &kp W       // W
-#define BR_E &kp E       // E
-#define BR_R &kp R       // R
-#define BR_T &kp T       // T
-#define BR_Y &kp Y       // Y
-#define BR_U &kp U       // U
-#define BR_I &kp I       // I
-#define BR_O &kp O       // O
-#define BR_P &kp P       // P
-#define BR_A &kp A       // A
-#define BR_S &kp S       // S
-#define BR_D &kp D       // D
-#define BR_F &kp F       // F
-#define BR_G &kp G       // G
-#define BR_H &kp H       // H
-#define BR_J &kp J       // J
-#define BR_K &kp K       // K
-#define BR_L &kp L       // L
-#define BR_Z &kp Z       // Z
-#define BR_X &kp X       // X
-#define BR_C &kp C       // C
-#define BR_V &kp V       // V
-#define BR_B &kp B       // B
-#define BR_N &kp N       // N
-#define BR_M &kp M       // M
+#define BR_Q &kp Q
+#define BR_W &kp W
+#define BR_E &kp E
+#define BR_R &kp R
+#define BR_T &kp T
+#define BR_Y &kp Y
+#define BR_U &kp U
+#define BR_I &kp I
+#define BR_O &kp O
+#define BR_P &kp P
+#define BR_A &kp A
+#define BR_S &kp S
+#define BR_D &kp D
+#define BR_F &kp F
+#define BR_G &kp G
+#define BR_H &kp H
+#define BR_J &kp J
+#define BR_K &kp K
+#define BR_L &kp L
+#define BR_Z &kp Z
+#define BR_X &kp X
+#define BR_C &kp C
+#define BR_V &kp V
+#define BR_B &kp B
+#define BR_N &kp N
+#define BR_M &kp M
 
-// CARACTERES ESPECIAIS ABNT2
-#define BR_ACUT &kp LBKT     // ´ (acento agudo)
-#define BR_LBKT &kp RBKT     // [ (colchete esquerdo)
-#define BR_CEDL &kp SEMI     // Ç (cedilha)
-#define BR_TILD &kp SQT      // ~ (til)
-#define BR_RBKT &kp BSLH     // ] (colchete direito)
-#define BR_BSLH &kp NUBS     // \ (barra invertida) - se disponível
-#define BR_COMM &kp COMMA    // , (vírgula)
-#define BR_DOT &kp DOT       // . (ponto)
-#define BR_SCLN &kp FSLH     // ; (ponto e vírgula)
+// SÍMBOLOS SEM SHIFT (posição física no ABNT2 -> código HID)
+#define BR_QUOT  &kp GRAVE   // '
+#define BR_MINUS &kp MINUS   // -
+#define BR_EQUAL &kp EQUAL   // =
+#define BR_ACUT  &kp LBKT    // ´ (tecla morta)
+#define BR_LBKT  &kp RBKT    // [
+#define BR_CEDL  &kp SEMI    // Ç
+#define BR_TILD  &kp SQT     // ~ (tecla morta)
+#define BR_RBKT  &kp BSLH    // ]
+#define BR_BSLH  &kp NUBS    // \  (tecla ao lado do Shift esquerdo)
+#define BR_COMM  &kp COMMA   // ,
+#define BR_DOT   &kp DOT     // .
+#define BR_SCLN  &kp FSLH    // ;  (no ABNT2 a posição "/" americana é o ;)
+#define BR_SEMI  BR_SCLN
+#define BR_FSLH  &kp INT1    // /  (tecla ao lado do Shift direito)  <-- CORREÇÃO
 
-// ============================================================================
-// NOVAS SOLUÇÕES PARA BARRA (/) - RESOLVENDO CONFLITO COM ;
-// ============================================================================
-// PROBLEMA: Todas as opções anteriores disparavam ; em vez de /
-// 
-// ORDEM DE TESTE RECOMENDADA:
-// 1. Teste OPÇÃO 1 (já ativa) - Shift+7
-// 2. Se falhar, teste OPÇÃO 4 - AltGr+7 (específico ABNT2)  
-// 3. Se falhar, teste OPÇÃO 2 - Alt+047 (código ASCII)
-// 4. Continue com as outras opções...
-//
-// TESTE UMA POR VEZ - descomente apenas uma linha:
+// SÍMBOLOS COM SHIFT
+#define BR_DQUO  &kp LS(GRAVE)  // "
+#define BR_EXCL  &kp LS(N1)     // !
+#define BR_AT    &kp LS(N2)     // @
+#define BR_HASH  &kp LS(N3)     // #
+#define BR_DLR   &kp LS(N4)     // $
+#define BR_PERC  &kp LS(N5)     // %
+#define BR_DIAE  &kp LS(N6)     // ¨ (tecla morta)
+#define BR_CARET BR_DIAE        // nome antigo mantido por compatibilidade
+#define BR_AMPR  &kp LS(N7)     // &
+#define BR_ASTR  &kp LS(N8)     // *
+#define BR_LPAR  &kp LS(N9)     // (
+#define BR_RPAR  &kp LS(N0)     // )
+#define BR_UNDS  &kp LS(MINUS)  // _
+#define BR_PLUS  &kp LS(EQUAL)  // +
+#define BR_GRV   &kp LS(LBKT)   // ` (tecla morta)
+#define BR_LCBR  &kp LS(RBKT)   // {
+#define BR_CIRC  &kp LS(SQT)    // ^ (tecla morta)
+#define BR_RCBR  &kp LS(BSLH)   // }
+#define BR_PIPE  &kp LS(NUBS)   // |
+#define BR_LABK  &kp LS(COMMA)  // <
+#define BR_RABK  &kp LS(DOT)    // >
+#define BR_COLN  &kp LS(FSLH)   // :
+#define BR_QUES  &kp LS(INT1)   // ?  <-- CORREÇÃO
 
-//#define BR_FSLH &slash_option_1   // NOVA OPÇÃO 1: Shift+7 (alguns layouts) dispara : &
+// SÍMBOLOS COM ALTGR
+#define BR_SUP1  &kp RA(N1)     // ¹
+#define BR_SUP2  &kp RA(N2)     // ²
+#define BR_SUP3  &kp RA(N3)     // ³
+#define BR_PND   &kp RA(N4)     // £
+#define BR_CENT  &kp RA(N5)     // ¢
+#define BR_NOT   &kp RA(N6)     // ¬
+#define BR_SECT  &kp RA(EQUAL)  // §
+#define BR_ORDF  &kp RA(RBKT)   // ª
+#define BR_ORDM  &kp RA(BSLH)   // º
+#define BR_DEG   &kp RA(E)      // °
 
-#define BR_FSLH &slash_option_2   // NOVA OPÇÃO 2: Alt+047 (código ASCII)  FUNCIONOU
-// #define BR_FSLH &slash_option_3   // NOVA OPÇÃO 3: usando BSLH
-// #define BR_FSLH &slash_option_4   // NOVA OPÇÃO 4: AltGr+7 (ABNT2)
-// #define BR_FSLH &slash_option_5   // NOVA OPÇÃO 5: Sequência AltGr+7
-// #define BR_FSLH &slash_option_6   // NOVA OPÇÃO 6: usando EQUAL
-// #define BR_FSLH &slash_option_7   // NOVA OPÇÃO 7: Shift+Comma
-
-// OPÇÕES ANTIGAS (comentadas por causarem conflito):
-// #define BR_FSLH &kp SLASH         // Antiga: causava conflito
-// #define BR_FSLH &forward_slash    // Antiga: causava conflito  
-// #define BR_FSLH &kp FSLH          // Antiga: causava conflito
-
-// CARACTERES COM SHIFT
-#define BR_DQUO &kp LS(N2)   // " (aspas duplas)
-#define BR_AT &kp LS(N3)     // @ (arroba)
-#define BR_HASH &kp LS(N4)   // # (jogo da velha)
-#define BR_DLR &kp LS(N5)    // $ (dólar)
-#define BR_PERC &kp LS(N6)   // % (porcento)
-#define BR_CARET &kp LS(N7)  // ¨ (trema)
-#define BR_AMPR &kp LS(N8)   // & (e comercial)
-#define BR_ASTR &kp LS(N9)   // * (asterisco)
-#define BR_LPAR &kp LS(N0)   // ( (parêntese esquerdo)
-#define BR_RPAR &kp LS(MINUS) // ) (parêntese direito)
-#define BR_UNDS &kp LS(EQUAL) // _ (sublinhado)
-#define BR_PLUS &kp LS(EQUAL) // + (mais)
-#define BR_GRV &kp LS(LBKT)  // ` (crase)
-#define BR_LCBR &kp LS(RBKT) // { (chave esquerda)
-#define BR_COLN &kp LS(SEMI) // : (dois pontos)
-#define BR_CIRC &kp LS(SQT)  // ^ (circunflexo)
-#define BR_RCBR &kp LS(BSLH) // } (chave direita)
-#define BR_PIPE &kp LS(NUBS) // | (pipe)
-#define BR_LABK &kp LS(COMMA) // < (menor que)
-#define BR_RABK &kp LS(DOT)   // > (maior que)
-// ============================================================================
-// MÚLTIPLAS SOLUÇÕES PARA INTERROGAÇÃO (?) - TESTE UMA POR VEZ!
-// ============================================================================
-// INSTRUÇÕES:
-// 1. Descomente APENAS UMA das opções abaixo 
-// 2. Comente a opção que estava ativa antes
-// 3. Recompile o firmware
-// 4. Teste no teclado
-// 5. Se não funcionar, tente a próxima opção
-// ============================================================================
-
-//#define BR_QUES &question_mark_1  // OPÇÃO 1: Shift+W via macro simples (não funcionou)
-
-//#define BR_QUES &question_mark_2  // OPÇÃO 2: Alt+código ASCII 063 (versão antiga)
-//#define BR_QUES &question_mark_3  // OPÇÃO 3: Shift+Slash direto  dispara : :
-//#define BR_QUES &question_mark_4  // OPÇÃO 4: Alt codes Windows otimizado (não funcionou no Win11)
-// #define BR_QUES &question_mark_5  // OPÇÃO 5: AltGr+W (ABNT2 alternativo)
-//#define BR_QUES &question_mark_win11  // OPÇÃO 6: Left Shift+W (não funcionou - sai W maiúsculo)
-//#define BR_QUES &question_mark_rshift  // OPÇÃO 7: Right Shift+W (teste esta alternativa)
-#define BR_QUES &question_mark_alt063  // OPÇÃO 8: Alt+063 (código ASCII) - TESTE ESTA PRIMEIRO
-
-// OPÇÕES TRADICIONAIS (se as macros não funcionarem):
-// #define BR_QUES &kp QMARK         // OPÇÃO 9: Código direto QMARK (teste se a opção 8 não funcionar)
-// #define BR_QUES &kp LS(W)         // OPÇÃO 10: Shift+W direto - NÃO FUNCIONOU (sai apenas W)
-
-// CARACTERES COM ALTGR (right alt)
-#define BR_SUP2 &kp RA(N2)   // ² (dois ao quadrado)
-#define BR_SUP3 &kp RA(N3)   // ³ (três ao quadrado)
-#define BR_PND &kp RA(N4)    // £ (libra)
-#define BR_CENT &kp RA(N5)   // ¢ (centavo)
-#define BR_NOT &kp RA(N6)    // ¬ (não lógico)
-
-// ACENTOS MORTOS (dead keys) - Para uso com combinações
-#define BR_DEAD_ACUTE &kp LBKT    // ´ (acento agudo morto)
-#define BR_DEAD_GRAVE &kp LS(LBKT) // ` (crase morta)
-#define BR_DEAD_TILDE &kp SQT      // ~ (til morto)
-#define BR_DEAD_CIRC &kp LS(SQT)   // ^ (circunflexo morto)
-
-// CORREÇÕES PARA LAYOUT ABNT2
-// No ABNT2, o ponto e vírgula está na posição onde ficaria a barra no QWERTY US
-#define BR_SEMI &kp FSLH        // ; (ponto e vírgula na posição da barra)
-
-// ACENTOS DIRETOS - Para funcionar com o layout ABNT2 no OS
-// Essas combinações devem funcionar com dead keys do ABNT2
-#define BR_A_ACUTE &macro_tap &kp LBKT &kp A   // ´ + a = á
-#define BR_E_ACUTE &macro_tap &kp LBKT &kp E   // ´ + e = é  
-#define BR_I_ACUTE &macro_tap &kp LBKT &kp I   // ´ + i = í
-#define BR_O_ACUTE &macro_tap &kp LBKT &kp O   // ´ + o = ó
-#define BR_U_ACUTE &macro_tap &kp LBKT &kp U   // ´ + u = ú
-
-#define BR_A_GRAVE &macro_tap &kp LS(LBKT) &kp A  // ` + a = à
-#define BR_E_GRAVE &macro_tap &kp LS(LBKT) &kp E  // ` + e = è
-#define BR_I_GRAVE &macro_tap &kp LS(LBKT) &kp I  // ` + i = ì
-#define BR_O_GRAVE &macro_tap &kp LS(LBKT) &kp O  // ` + o = ò
-#define BR_U_GRAVE &macro_tap &kp LS(LBKT) &kp U  // ` + u = ù
-
-#define BR_A_TILDE &macro_tap &kp SQT &kp A      // ~ + a = ã
-#define BR_O_TILDE &macro_tap &kp SQT &kp O      // ~ + o = õ
-#define BR_N_TILDE &macro_tap &kp SQT &kp N      // ~ + n = ñ
-
-#define BR_A_CIRC &macro_tap &kp LS(SQT) &kp A   // ^ + a = â
-#define BR_E_CIRC &macro_tap &kp LS(SQT) &kp E   // ^ + e = ê
-#define BR_I_CIRC &macro_tap &kp LS(SQT) &kp I   // ^ + i = î
-#define BR_O_CIRC &macro_tap &kp LS(SQT) &kp O   // ^ + o = ô
-#define BR_U_CIRC &macro_tap &kp LS(SQT) &kp U   // ^ + u = û
-
-// LETRAS ACENTUADAS DIRETAS - Mapeamento correto para ABNT2
-// Essas são as posições exatas no layout ABNT2 brasileiro
-#define BR_AACUTE &kp LBKT &kp A    // ´ + a = á  
-#define BR_EACUTE &kp LBKT &kp E    // ´ + e = é
-#define BR_IACUTE &kp LBKT &kp I    // ´ + i = í
-#define BR_OACUTE &kp LBKT &kp O    // ´ + o = ó
-#define BR_UACUTE &kp LBKT &kp U    // ´ + u = ú
-
-#define BR_AGRAVE &kp LS(LBKT) &kp A // ` + a = à
-#define BR_ATILDE &kp SQT &kp A      // ~ + a = ã  
-#define BR_OTILDE &kp SQT &kp O      // ~ + o = õ
-
-#define BR_ACIRC &kp LS(SQT) &kp A   // ^ + a = â
-#define BR_ECIRC &kp LS(SQT) &kp E   // ^ + e = ê
-#define BR_ICIRC &kp LS(SQT) &kp I   // ^ + i = î  
-#define BR_OCIRC &kp LS(SQT) &kp O   // ^ + o = ô
-#define BR_UCIRC &kp LS(SQT) &kp U   // ^ + u = û
-
-// CARACTERES ESPECIAIS EXTRAS
-#define BR_ORDM &kp RA(N0)   // º (ordinal masculino)
-#define BR_ORDF &kp RA(N9)   // ª (ordinal feminino)
+// TECLAS MORTAS (aliases)
+#define BR_DEAD_ACUTE BR_ACUT
+#define BR_DEAD_GRAVE BR_GRV
+#define BR_DEAD_TILDE BR_TILD
+#define BR_DEAD_CIRC  BR_CIRC
