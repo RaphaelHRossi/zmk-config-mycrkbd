@@ -14,19 +14,19 @@ manifest:
   projects:
     - name: zmk
       remote: zmkfirmware
-      revision: main
+      revision: v0.3 # fixado: main migrou p/ Zephyr 4.1 em 12/2025 e quebrou o build
       import: app/west.yml
     # nice_view_gem
     - name: nice-view-gem
       remote: m165437
-      revision: main
+      revision: 7794ebf7f75d7e16cb05240bcffe6c5a45ef5b44 # ultimo commit compativel com zmk v0.3
     # dongle_display
     - name: zmk-dongle-display
       remote: englmaxi
-      revision: main
+      revision: c6c4be11c5ede722086a2a1f355cec9c101b9390 # ultimo commit compativel com zmk v0.3
     # nice_oled
     - name: zmk-nice-oled
       remote: mctechnology17
-      revision: main
+      revision: 5d7dce25735277dd6dcd8295c64e143d4f95cdfa # ultimo commit compativel com zmk v0.3
   self:
     path: config
