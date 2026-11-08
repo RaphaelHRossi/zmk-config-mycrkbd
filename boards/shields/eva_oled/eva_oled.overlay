@@ -1,0 +1,10 @@
+/*
+ * EVA OLED: run the OLED's I2C bus at 400 kHz so animated frames
+ * don't keep the bus busy (default is 100 kHz).
+ * SPDX-License-Identifier: MIT
+ */
+#include <dt-bindings/i2c/i2c.h>
+
+&pro_micro_i2c {
+    clock-frequency = <I2C_BITRATE_FAST>;
+};

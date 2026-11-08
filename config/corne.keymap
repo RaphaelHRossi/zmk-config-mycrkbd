@@ -61,6 +61,7 @@
         compatible = "zmk,keymap";
 
         default_layer {
+            display-name = "BASE";
             // -----------------------------------------------------------------------------------------
             // | TAB  |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | SHFT |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  Ç  |  ~   |
@@ -76,6 +77,7 @@
         };
 
         lower_layer {
+            display-name = "LOWER";
             // -----------------------------------------------------------------------------------------
             // | TAB  |  1  |  2  |  3  |  4  |  5  |   |  6  |  7  |  8  |  9  |  0  | DEL  |
             // | SHFT | ´   | `   | ~   | ^   | ?   |   | LFT | DWN |  UP | RGT | HOME| END  |
@@ -91,6 +93,7 @@ BR_LCTRL    &trans        &trans         &trans       &trans        BR_FSLH     
         };
 
         raise_layer {
+            display-name = "RAISE";
             // -----------------------------------------------------------------------------------------
             // | F1   | F2  | F3  | F4  | F5  | F6  |   | F7  | F8  | F9  | F10 | F11 | F12  |
             // | CAPS |     |     |     |     |PRTSC|   |  -  |  =  |  [  |  ]  |  \  |  '   |
@@ -112,6 +115,7 @@ BR_LCTRL    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE    &kp C_PLAY    &kp C_PAUSE 
 
         // Layer 3: Gaming (toggle via LWR+RSE combo). Default: fall-through to base.
         game_layer {
+            display-name = "GAME";
             // -----------------------------------------------------------------------------------------
             // | ESC  |    1   |  Q  |  W  |  E  |  R  |   |  T  |  Y   |  U  |  I  |  O  |  P  |
             // | TAB  |  SHFT  |  A  |  S  |  D  |  F  |   |  G  |  H   |  J  |  K  |  L  |  Ç  |
@@ -128,6 +132,7 @@ BR_LCTRL    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE    &kp C_PLAY    &kp C_PAUSE 
 
         // Layer 4: Game layer com números na linha superior (ativada com LWR na game_layer)
         game_lower_layer {
+            display-name = "G-NUM";
             // -----------------------------------------------------------------------------------------
             // | ESC  |  1     |  2  |  3  |  4  |  5  |   |  6  |  7   |  8  |  9  |  0  |  P  |
             // | TAB  |  SHFT  |  A  |  S  |  D  |  F  |   |  G  |  H   |  J  |  K  |  L  |  Ç  |

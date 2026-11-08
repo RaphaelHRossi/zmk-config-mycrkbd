@@ -1,0 +1,9 @@
+file_format: "1"
+id: eva_oled
+name: EVA OLED
+type: shield
+url: https://github.com/RaphaelHRossi/zmk-config-mycrkbd
+requires:
+  - pro_micro
+features:
+  - display

@@ -1,0 +1,49 @@
+# EVA OLED - Evangelion themed status screen for 128x32 SSD1306 (Corne)
+# SPDX-License-Identifier: MIT
+
+if SHIELD_EVA_OLED
+
+config EVA_OLED_FRAME_MS
+    int "EVA OLED frame period in ms"
+    default 80
+
+config EVA_OLED_FLIP
+    bool "Rotate the EVA screen by 180 degrees"
+    default n
+
+config EVA_OLED_INVERT
+    bool "Swap lit/unlit pixels (use if the screen shows a negative image)"
+    default n
+
+config ZMK_DISPLAY
+    default y
+
+choice ZMK_DISPLAY_STATUS_SCREEN
+    default ZMK_DISPLAY_STATUS_SCREEN_CUSTOM
+endchoice
+
+choice ZMK_DISPLAY_WORK_QUEUE
+    default ZMK_DISPLAY_WORK_QUEUE_DEDICATED
+endchoice
+
+config LV_Z_BITS_PER_PIXEL
+    default 1
+
+choice LV_COLOR_DEPTH
+    default LV_COLOR_DEPTH_1
+endchoice
+
+config LV_Z_MEM_POOL_SIZE
+    default 4096
+
+if !ZMK_SPLIT || ZMK_SPLIT_ROLE_CENTRAL
+
+config ZMK_WPM
+    default y
+
+config ZMK_HID_INDICATORS
+    default y
+
+endif
+
+endif # SHIELD_EVA_OLED

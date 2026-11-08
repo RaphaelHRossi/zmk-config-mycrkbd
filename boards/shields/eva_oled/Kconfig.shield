@@ -1,0 +1,2 @@
+config SHIELD_EVA_OLED
+    def_bool $(shields_list_contains,eva_oled)

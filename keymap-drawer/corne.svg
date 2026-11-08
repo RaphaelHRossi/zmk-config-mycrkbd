@@ -215,8 +215,8 @@ rect.held, rect.combo.held {
   visibility: hidden;
 }
 </style>
-<g transform="translate(40, 0)" class="layer-default">
-<text x="0" y="28" class="label" id="default">default:</text>
+<g transform="translate(40, 0)" class="layer-BASE">
+<text x="0" y="28" class="label" id="BASE">BASE:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -368,8 +368,8 @@ rect.held, rect.combo.held {
 </g>
 <g transform="translate(286, 213) rotate(15.0)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#lower">
-<text x="0" y="0" class="key tap layer-activator">lower</text>
+<a href="#LOWER">
+<text x="0" y="0" class="key tap layer-activator">LOWER</text>
 </a></g>
 <g transform="translate(351, 224) rotate(30.0)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
@@ -381,8 +381,8 @@ rect.held, rect.combo.held {
 </g>
 <g transform="translate(554, 213) rotate(-15.0)" class="key keypos-40">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#raise">
-<text x="0" y="0" class="key tap layer-activator">raise</text>
+<a href="#RAISE">
+<text x="0" y="0" class="key tap layer-activator">RAISE</text>
 </a></g>
 <g transform="translate(616, 205)" class="key keypos-41">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -392,8 +392,8 @@ rect.held, rect.combo.held {
 <path d="M420,213 l-116,0" class="combo"/>
 <path d="M420,213 l116,0" class="combo"/>
 <rect rx="6" ry="6" x="406" y="200" width="28" height="26" class="combo"/>
-<a href="#game">
-<text x="420" y="213" class="combo tap layer-activator">game</text>
+<a href="#GAME">
+<text x="420" y="213" class="combo tap layer-activator">GAME</text>
 </a><text x="420" y="224" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-1">
@@ -444,8 +444,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 331)" class="layer-lower">
-<text x="0" y="28" class="label" id="lower">lower:</text>
+<g transform="translate(40, 331)" class="layer-LOWER">
+<text x="0" y="28" class="label" id="LOWER">LOWER:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -620,8 +620,8 @@ rect.held, rect.combo.held {
 <path d="M420,213 l-116,0" class="combo"/>
 <path d="M420,213 l116,0" class="combo"/>
 <rect rx="6" ry="6" x="406" y="200" width="28" height="26" class="combo"/>
-<a href="#game">
-<text x="420" y="213" class="combo tap layer-activator">game</text>
+<a href="#GAME">
+<text x="420" y="213" class="combo tap layer-activator">GAME</text>
 </a><text x="420" y="224" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-1">
@@ -672,8 +672,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 661)" class="layer-raise">
-<text x="0" y="28" class="label" id="raise">raise:</text>
+<g transform="translate(40, 661)" class="layer-RAISE">
+<text x="0" y="28" class="label" id="RAISE">RAISE:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -857,8 +857,8 @@ rect.held, rect.combo.held {
 <path d="M420,213 l-116,0" class="combo"/>
 <path d="M420,213 l116,0" class="combo"/>
 <rect rx="6" ry="6" x="406" y="200" width="28" height="26" class="combo"/>
-<a href="#game">
-<text x="420" y="213" class="combo tap layer-activator">game</text>
+<a href="#GAME">
+<text x="420" y="213" class="combo tap layer-activator">GAME</text>
 </a><text x="420" y="224" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-1">
@@ -909,8 +909,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 992)" class="layer-game">
-<text x="0" y="28" class="label" id="game">game:</text>
+<g transform="translate(40, 992)" class="layer-GAME">
+<text x="0" y="28" class="label" id="GAME">GAME:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1062,8 +1062,8 @@ rect.held, rect.combo.held {
 </g>
 <g transform="translate(286, 213) rotate(15.0)" class="key keypos-37">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
-<a href="#game_lower">
-<text x="0" y="0" class="key tap layer-activator"><tspan style="font-size: 60%">game_lower</tspan></text>
+<a href="#G-NUM">
+<text x="0" y="0" class="key tap layer-activator">G-NUM</text>
 </a></g>
 <g transform="translate(351, 224) rotate(30.0)" class="key keypos-38">
 <rect rx="6" ry="6" x="-26" y="-40" width="52" height="80" class="key"/>
@@ -1085,8 +1085,8 @@ rect.held, rect.combo.held {
 <path d="M420,213 l-116,0" class="combo"/>
 <path d="M420,213 l116,0" class="combo"/>
 <rect rx="6" ry="6" x="406" y="200" width="28" height="26" class="combo"/>
-<a href="#game">
-<text x="420" y="213" class="combo tap layer-activator">game</text>
+<a href="#GAME">
+<text x="420" y="213" class="combo tap layer-activator">GAME</text>
 </a><text x="420" y="224" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-1">
@@ -1137,8 +1137,8 @@ rect.held, rect.combo.held {
 </g>
 </g>
 </g>
-<g transform="translate(40, 1323)" class="layer-game_lower">
-<text x="0" y="28" class="label" id="game_lower">game_lower:</text>
+<g transform="translate(40, 1323)" class="layer-G-NUM">
+<text x="0" y="28" class="label" id="G-NUM">G-NUM:</text>
 <g transform="translate(0, 56)">
 <g transform="translate(28, 49)" class="key keypos-0">
 <rect rx="6" ry="6" x="-26" y="-26" width="52" height="52" class="key"/>
@@ -1311,8 +1311,8 @@ rect.held, rect.combo.held {
 <path d="M420,213 l-116,0" class="combo"/>
 <path d="M420,213 l116,0" class="combo"/>
 <rect rx="6" ry="6" x="406" y="200" width="28" height="26" class="combo"/>
-<a href="#game">
-<text x="420" y="213" class="combo tap layer-activator">game</text>
+<a href="#GAME">
+<text x="420" y="213" class="combo tap layer-activator">GAME</text>
 </a><text x="420" y="224" class="combo hold">toggle</text>
 </g>
 <g class="combo combopos-1">
